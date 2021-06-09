@@ -1,0 +1,28 @@
+各ファイルにて、プロジェクトフォルダ名に合わせる
+
+docker-compose run --no-deps web rails new . --force --database=postgresql
+
+docker-compose build
+
+↓config/database.ymlに書く sampleの部分はプロジェクト名にすると良い
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  username: postgres
+  password: password
+  pool: 5
+
+development:
+  <<: *default
+  database: sample_development
+
+
+test:
+  <<: *default
+  database: sample_test
+
+↑config/database.ymlに書く
+
+db:create わすれない
