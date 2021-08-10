@@ -53,7 +53,7 @@ docker-compose down
 
 ### rails等のコマンドを実行したい場合
 ```
-docker-compose run web [ここからコマンド]
+docker-compose run --rm web [ここからコマンド]
 ```
 
 ### Gemfileを編集したら
