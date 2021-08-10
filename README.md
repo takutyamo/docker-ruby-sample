@@ -4,7 +4,7 @@
 
 各ファイルにて、プロジェクトフォルダ名に合わせる
 ```
-docker-compose run --no-deps web rails new . --force --database=postgresql
+docker-compose run --rm --no-deps web rails new . --force --database=postgresql
 
 docker-compose build
 ```
